@@ -16,11 +16,27 @@
         </div>
 
         <div class="header-mobile-menu">
-          <i class="fa-solid fa-bars"></i>
+          <i id = "open" class="fa-solid fa-bars"></i>
+          <i id = "close" class="fa-solid fa-bars"></i>
         </div>
+      </div>
+      <div class="header-mobile-content">
+
       </div>
     </div>
 
+    <script>
+        document.querySelector("#open").addEventListener("click", function () {
+          document.querySelector(".header-mobile-content").style.display = "flex";
+          document.querySelector("#open").style.display = "none";
+          document.querySelector("#close").style.display = "flex";
+        });
 
+        document.querySelector("#close").addEventListener("click", function () {
+          document.querySelector(".header-mobile-content").style.display = "none";
+          document.querySelector("#open").style.display = "flex";
+          document.querySelector("#close").style.display = "none";
+        });
+    </script>
   </body>
 </html>
